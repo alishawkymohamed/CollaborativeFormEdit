@@ -1,0 +1,66 @@
+<div class="container text-center">
+  <h3 style="margin-top: 10px;">Collaborative Form Editing</h3>
+  <div class="row" style="margin-top:50px;">
+
+    <div class="form-group row col-sm-12">
+      <label class="col-sm-3 col-form-label" for="name">Name</label>
+      <div class="col-sm-9">
+        <input type="text" name="name" id="Name" class="form-control" #name (focus)="InputFocused(name.id)"
+         (blur)="InputBlured(name.id)" (keyup)="InputKeyup(name.id,name.value)" />
+        <p [hidden]="!name.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="NameError"></p>
+      </div>
+    </div>
+
+    <div class="form-group row col-sm-12">
+      <label class="col-sm-3 col-form-label" for="Address">Address</label>
+      <div class="col-sm-9">
+        <input type="text" name="Address" id="Address" class="form-control" #address (focus)="InputFocused(address.id)"
+         (blur)="InputBlured(address.id)" (keyup)="InputKeyup(address.id,address.value)"/>
+        <p [hidden]="!address.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="AddressError"></p>
+      </div>
+    </div>
+
+    <div class="form-group row col-sm-12">
+      <label class="col-sm-3 col-form-label" for="Department">Department</label>
+      <div class="col-sm-9">
+        <input type="text" name="Department" id="Department" class="form-control" #dept (focus)="InputFocused(dept.id)" 
+        (blur)="InputBlured(dept.id)" (keyup)="InputKeyup(dept.id,dept.value)"/>
+        <p [hidden]="!dept.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="DepartmentError"></p>
+      </div>
+    </div>
+
+    <div class="form-group row col-sm-12">
+      <label class="col-sm-3 col-form-label" for="Age">Age</label>
+      <div class="col-sm-9">
+        <input type="text" name="Age" id="Age" class="form-control" #age (focus)="InputFocused(age.id)" 
+        (blur)="InputBlured(age.id)" (keyup)="InputKeyup(age.id,age.value)"/>
+        <p [hidden]="!age.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="AgeError"></p>
+      </div>
+    </div>
+
+  </div>
+</div>
+
+<!-- Button trigger modal -->
+<button hidden type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" #exampleModal>
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div data-backdrop="static" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please Enter Your Name</h5>
+      </div>
+      <div class="modal-body">
+        <input required [(ngModel)]="username" class="form-control" type="text" name="username" id="username" />
+        <label *ngIf="!username" style="color: red;" class="text-justify">You Should Enter your Name !!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>

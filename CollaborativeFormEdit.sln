@@ -1,0 +1,25 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio 15
+VisualStudioVersion = 15.0.28010.2036
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "CollaborativeFormEdit", "CollaborativeFormEdit\CollaborativeFormEdit.csproj", "{76F0B980-2B62-460E-AAB3-802829A5CB16}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{76F0B980-2B62-460E-AAB3-802829A5CB16}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{76F0B980-2B62-460E-AAB3-802829A5CB16}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{76F0B980-2B62-460E-AAB3-802829A5CB16}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{76F0B980-2B62-460E-AAB3-802829A5CB16}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {B7EC7434-7791-4AB6-9299-CC565BEB79BC}
+	EndGlobalSection
+EndGlobal
