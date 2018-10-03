@@ -1,0 +1,46 @@
+<br>
+<br>
+<div class="container">
+  <div class="chat-items">
+    <div style="text-align: center;">
+      <h2>Chats</h2>
+      <hr>
+    </div>
+    <div style="height: 400px;overflow: auto;">
+      <ul>
+        <li *ngFor="let m of messages">{{m.name}} : {{m.message}}</li>
+      </ul>
+    </div>
+  </div>
+  <div>
+    <textarea [(ngModel)]="message" #txtarea class="form-control" cols="3" style="width:100%"></textarea>
+    <br>
+    <button class="btn btn-success" (click)="Send()">Send to Others</button>
+    <button style="margin-left: 30px;" class="btn btn-primary" routerLink="">Back to Form</button>
+  </div>
+</div>
+
+br
+<!-- Button trigger modal -->
+<button hidden type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" #exampleModal>
+  Launch demo modal
+</button>
+
+<!-- Modal -->
+<div data-backdrop="static" class="modal fade" id="exampleModal" tabindex="-1" role="dialog" aria-labelledby="exampleModalLabel"
+  aria-hidden="true">
+  <div class="modal-dialog" role="document">
+    <div class="modal-content">
+      <div class="modal-header">
+        <h5 class="modal-title" id="exampleModalLabel">Please Enter Your Name</h5>
+      </div>
+      <div class="modal-body">
+        <input required [(ngModel)]="username" class="form-control" type="text" name="username" id="username" />
+        <label *ngIf="!username" style="color: red;" class="text-justify">You Should Enter your Name !!</label>
+      </div>
+      <div class="modal-footer">
+        <button type="submit" class="btn btn-primary" (click)="onSubmit()">Ok</button>
+      </div>
+    </div>
+  </div>
+</div>

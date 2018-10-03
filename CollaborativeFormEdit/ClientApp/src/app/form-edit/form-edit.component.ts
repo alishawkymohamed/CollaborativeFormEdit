@@ -20,12 +20,14 @@ export class FormEditComponent implements OnInit, AfterViewInit {
   constructor(
     private signalR: SignalrService,
     private usernameservice: UsernameService
-  ) {}
+  ) { }
 
-  ngOnInit() {}
+  ngOnInit() { }
 
   ngAfterViewInit(): void {
-    this.toggleBtn.nativeElement.click();
+    if (!this.usernameservice.CurrentUserName) {
+      this.toggleBtn.nativeElement.click();
+    }
   }
 
   onSubmit() {
@@ -41,7 +43,7 @@ export class FormEditComponent implements OnInit, AfterViewInit {
     this.signalR.InputBlured(inputId);
   }
 
-  InputKeyup(inputId: string,value: string){
-    this.signalR.UserTyping(inputId,value);
+  InputKeyup(inputId: string, value: string) {
+    this.signalR.UserTyping(inputId, value);
   }
 }

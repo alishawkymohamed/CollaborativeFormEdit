@@ -5,8 +5,8 @@
     <div class="form-group row col-sm-12">
       <label class="col-sm-3 col-form-label" for="name">Name</label>
       <div class="col-sm-9">
-        <input type="text" name="name" id="Name" class="form-control" #name (focus)="InputFocused(name.id)"
-         (blur)="InputBlured(name.id)" (keyup)="InputKeyup(name.id,name.value)" />
+        <input type="text" name="name" id="Name" class="form-control" #name (focus)="InputFocused(name.id)" (blur)="InputBlured(name.id)"
+          (keyup)="InputKeyup(name.id,name.value)" />
         <p [hidden]="!name.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="NameError"></p>
       </div>
     </div>
@@ -15,7 +15,7 @@
       <label class="col-sm-3 col-form-label" for="Address">Address</label>
       <div class="col-sm-9">
         <input type="text" name="Address" id="Address" class="form-control" #address (focus)="InputFocused(address.id)"
-         (blur)="InputBlured(address.id)" (keyup)="InputKeyup(address.id,address.value)"/>
+          (blur)="InputBlured(address.id)" (keyup)="InputKeyup(address.id,address.value)" />
         <p [hidden]="!address.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="AddressError"></p>
       </div>
     </div>
@@ -23,8 +23,8 @@
     <div class="form-group row col-sm-12">
       <label class="col-sm-3 col-form-label" for="Department">Department</label>
       <div class="col-sm-9">
-        <input type="text" name="Department" id="Department" class="form-control" #dept (focus)="InputFocused(dept.id)" 
-        (blur)="InputBlured(dept.id)" (keyup)="InputKeyup(dept.id,dept.value)"/>
+        <input type="text" name="Department" id="Department" class="form-control" #dept (focus)="InputFocused(dept.id)"
+          (blur)="InputBlured(dept.id)" (keyup)="InputKeyup(dept.id,dept.value)" />
         <p [hidden]="!dept.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="DepartmentError"></p>
       </div>
     </div>
@@ -32,8 +32,8 @@
     <div class="form-group row col-sm-12">
       <label class="col-sm-3 col-form-label" for="Age">Age</label>
       <div class="col-sm-9">
-        <input type="text" name="Age" id="Age" class="form-control" #age (focus)="InputFocused(age.id)" 
-        (blur)="InputBlured(age.id)" (keyup)="InputKeyup(age.id,age.value)"/>
+        <input type="text" name="Age" id="Age" class="form-control" #age (focus)="InputFocused(age.id)" (blur)="InputBlured(age.id)"
+          (keyup)="InputKeyup(age.id,age.value)" />
         <p [hidden]="!age.disabled ? 'hidden' : ''" class="text-justify" style="color: red;" id="AgeError"></p>
       </div>
     </div>
@@ -41,6 +41,13 @@
   </div>
 </div>
 
+<br>
+<br>
+<br>
+
+<div style="text-align: center;">
+  <button class="btn btn-primary" routerLink="chat">Try Chat ?!!</button>
+</div>
 <!-- Button trigger modal -->
 <button hidden type="button" class="btn btn-primary" data-toggle="modal" data-target="#exampleModal" #exampleModal>
   Launch demo modal

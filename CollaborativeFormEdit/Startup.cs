@@ -47,6 +47,7 @@ namespace CollaborativeFormEdit
             app.UseSignalR(routes =>
             {
                 routes.MapHub<FormEditHub>("/FormEditHub");
+                routes.MapHub<ChatHub>("/ChatHub");
             });
 
             app.UseMvc(routes =>
