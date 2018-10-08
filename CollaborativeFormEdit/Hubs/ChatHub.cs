@@ -15,9 +15,15 @@ namespace CollaborativeFormEdit.Hubs
             return base.OnDisconnectedAsync(exception);
         }
 
-        public Task MessageSent(string Username, string Message)
+        public Task MessageSent(MessageDTO MessageDTO)
         {
-            return Clients.All.SendAsync("MessageRecieved", new { name = Username, message = Message });
+            return Clients.All.SendAsync("MessageRecieved", new MessageDTO { Username = MessageDTO.Username, Message = MessageDTO.Message });
         }
+    }
+
+    public class MessageDTO
+    {
+        public string Username { get; set; }
+        public string Message { get; set; }
     }
 }

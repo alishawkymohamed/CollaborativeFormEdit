@@ -16,14 +16,15 @@ export class ChatService {
       .build();
 
     this.connection.on("MessageRecieved", data => {
-      this.messageSevice.Messages.push({ name: data.name, message: data.message });
+      console.log(data);
+      this.messageSevice.Messages.push({ name: data.username, message: data.message });
     });
 
     this.connection.start().catch(err => console.log(err));
   }
 
   public SendMessage(name, message) {
-    this.connection.invoke("MessageSent", name, message)
+    this.connection.invoke("MessageSent", { "Username": name, "Message": message })
       .catch(err => console.log(err));
   }
 }
